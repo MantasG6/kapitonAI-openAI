@@ -1,0 +1,115 @@
+Name;Region;Coordinates
+Athens;Greece;37.9379,23.6523
+Split;Croatia;43.5075,16.4393
+Trogir;Croatia;43.5148,16.2511
+Palma de Mallorca;Balearic Islands, Spain;39.5666,2.6333
+Phuket;Thailand;8.0830,98.4397
+Cannes;French Riviera;43.5466,7.0292
+Miami;Florida, USA;25.7711,-80.1340
+Sydney;New South Wales, Australia;-33.8708,151.1992
+Auckland;New Zealand;-36.8410,174.7586
+St. Maarten;Caribbean;18.0404,-63.0918
+Bodrum;Turkey;37.0344,27.4289
+Naples;Italy;40.7102,14.4727
+Ibiza;Balearic Islands, Spain;38.9140,1.4452
+Mykonos;Greece;37.4612,25.3269
+Corfu;Greece;39.6543,19.8486
+Dubrovnik;Croatia;42.6711,18.0833
+Barcelona;Spain;41.3724,2.1874
+Marmaris;Turkey;36.8539,28.2739
+Tortola;British Virgin Islands;18.4152,-64.6295
+St. Thomas;US Virgin Islands;18.3344,-64.8528
+Nassau;Bahamas;25.0808,-77.3256
+Koh Samui;Thailand;9.5587,100.0229
+Bali;Indonesia;-8.7489,115.2048
+Vancouver;Canada;49.2893,-123.1238
+Victoria;Canada;48.4223,-123.3703
+Newport;USA;41.4877,-71.3132
+Boston;USA;42.3601,-71.0535
+Fort Lauderdale;USA;26.1112,-80.1058
+Mahé;Seychelles;-4.6780,55.4918
+Malé;Maldives;4.1755,73.5093
+Langkawi;Malaysia;6.3669,99.6780
+St. George's;Grenada;12.0433,-61.7512
+Castries;St. Lucia;13.9094,-60.9964
+Philipsburg;St. Maarten;18.0254,-63.0460
+Bridgetown;Barbados;13.1063,-59.6324
+Providenciales;Turks and Caicos;21.7735,-72.1525
+Stockholm;Sweden;59.3262,18.0715
+Copenhagen;Denmark;55.6761,12.5683
+Oslo;Norway;59.9078,10.7348
+Helsinki;Finland;60.1674,24.9426
+Reykjavik;Iceland;64.1475,-21.9426
+Cape Town;South Africa;-33.9078,18.4195
+Durban;South Africa;-29.8670,31.0461
+Marina del Rey;California, USA;33.9803,-118.4517
+Newport Beach;California, USA;33.6066,-117.9280
+San Diego;California, USA;32.7102,-117.1705
+Seattle;Washington, USA;47.6062,-122.3321
+Halifax;Nova Scotia, Canada;44.6462,-63.5704
+Charlottetown;Prince Edward Island, Canada;46.2352,-63.1253
+St. John's;Newfoundland and Labrador, Canada;47.5605,-52.7126
+Rio de Janeiro;Brazil;-22.9110,-43.2094
+Buenos Aires;Argentina;-34.6037,-58.3816
+Punta del Este;Uruguay;-34.9667,-54.9510
+Melbourne;Australia;-37.8140,144.9633
+Perth;Australia;-31.9505,115.8605
+Cairns;Australia;-16.9186,145.7781
+Hobart;Australia;-42.8821,147.3272
+Plymouth;UK;50.3642,-4.1371
+Southampton;UK;50.8978,-1.4064
+Portsmouth;UK;50.7989,-1.0912
+Nice;French Riviera;43.6960,7.2656
+Portofino;Italian Riviera;44.3035,9.2116
+Capri;Italy;40.5559,14.2225
+Sardinia;Italy;39.2064,9.1283
+Sicily;Italy;38.1157,13.3615
+Hvar;Croatia;43.1729,16.4402
+Zadar;Croatia;44.1194,15.2314
+Monaco;French Riviera;43.7336,7.4215
+St. Tropez;French Riviera;43.2676,6.6407
+Porto Cervo;Sardinia, Italy;41.1351,9.5311
+St. Lucia;Caribbean;13.9094,-60.9964
+Barbados;Caribbean;13.1063,-59.6324
+Antigua;Caribbean;17.1274,-61.8468
+St. Barts;Caribbean;17.8960,-62.8498
+Turks and Caicos;Caribbean;21.7735,-72.1525
+Virgin Gorda;British Virgin Islands;18.4908,-64.4380
+St. John;US Virgin Islands;18.3313,-64.7421
+Exuma;Bahamas;23.6348,-75.9374
+Grenada;Caribbean;12.0433,-61.7512
+Maldives;Indian Ocean;4.1755,73.5093
+Seychelles;Indian Ocean;-4.6780,55.4918
+Krabi;Thailand;8.0863,98.9063
+Phi Phi Islands;Thailand;7.7407,98.7784
+Whitsunday Islands;Australia;-20.2825,148.7150
+Bay of Islands;New Zealand;-35.2575,174.0906
+Marlborough Sounds;New Zealand;-41.2211,174.0603
+Gold Coast;Australia;-28.0167,153.4000
+Road Town;British Virgin Islands;18.4286,-64.6231
+Lavrion;Greece (Cyclades);37.7125,24.0564
+Lefkada;Greece (Ionian Sea);38.8316,20.7074
+Kos;Greece (Dodecanese);36.8946,27.2878
+Rhodes;Greece (Dodecanese);36.4344,28.2175
+Pula;Croatia (Istrian Coast);44.8666,13.8495
+Salerno;Italy (Amalfi Coast);40.6804,14.7592
+Olbia;Italy (Sardinia);40.9220,9.4995
+Portisco;Italy (Sardinia);41.0333,9.5235
+Cagliari;Italy (Sardinia);39.2153,9.1108
+Palermo;Italy (Sicily);38.1157,13.3615
+Catania;Italy (Sicily);37.5079,15.0830
+Ibiza Town;Spain (Balearic Islands);38.9089,1.4326
+Fethiye;Turkey (Turquoise Coast);36.6211,29.1092
+Göcek;Turkey (Turquoise Coast);36.7597,28.9435
+Airlie Beach;Australia (Whitsundays);-20.2670,148.7166
+Opua;New Zealand (Bay of Islands);-35.3167,174.1167
+Marseille;France (Côte d’Azur);43.2965,5.3698
+Ajaccio;France (Corsica);41.9272,8.7283
+Bonifacio;France (Corsica);41.3879,9.1623
+Raiatea;French Polynesia;-16.8244,-151.4254
+Papeete;French Polynesia (Tahiti);-17.5516,-149.5585
+Placencia;Belize;16.5216,-88.3704
+San Pedro;Belize;17.9226,-87.9715
+Marsh Harbour;Bahamas (Abacos);26.5412,-77.0636
+Key West;Florida Keys, USA;24.5551,-81.7800
+Lagos;Portugal (Algarve Coast);37.1026,-8.6741

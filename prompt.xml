@@ -1,0 +1,54 @@
+<sailingData>
+    <location>
+        <name>{location.name}</name>
+        <region>{location.region}</region>
+        <lat>{location.coords.lat}</lat>
+        <lon>{location.coords.lon}</lon>
+        <localtime>2024-11-12 10:55</localtime>
+    </location>
+    {forecast_xml}
+    {marine_xml}
+    <boatInfo>
+        <boatType>Cruising Yacht</boatType>
+        <length>12.5</length>
+        <width>4.2</width>
+        <waterlineDepth>1.8</waterlineDepth>
+        <mastHeight>16.0</mastHeight>
+        <displacement>8500</displacement>
+        <keelType>Fin keel</keelType>
+        <sailArea>75</sailArea>
+        <enginePower>25</enginePower>
+        <fuelCapacity>200</fuelCapacity>
+        <rudderType>Skeg-hung</rudderType>
+        <crewSize>6</crewSize>
+        <hullMaterial>Fiberglass</hullMaterial>
+    </boatInfo>
+    <experience>
+        <yearsOfExperience>7</yearsOfExperience>
+        <experienceLevel>Intermediate</experienceLevel>
+        <typeOfWaterSailed>
+            <waterType>Coastal</waterType>
+            <waterType>Inland Waters</waterType>
+        </typeOfWaterSailed>
+        <typesOfBoatsSailed>
+            <boatType>Monohull</boatType>
+            <boatType>Dinghy</boatType>
+        </typesOfBoatsSailed>
+        <certifications>
+            <certification>ASA 101 Basic Keelboat Sailing</certification>
+            <certification>ASA 103 Coastal Navigation</certification>
+        </certifications>
+        <totalMilesSailed>2500</totalMilesSailed>
+        <soloSailingExperience>No</soloSailingExperience>
+        <sailingCoursesTraining>
+            <course>Coastal Cruising</course>
+            <course>Advanced Seamanship</course>
+        </sailingCoursesTraining>
+    </experience>
+    <goal>
+        <comfort>Various</comfort>
+        <maxTimeDuration>08:00</maxTimeDuration>
+    </goal>
+</sailingData>
+Based on provided location, weather forecast, marine forecast, boatInfo and goal could you please provide me with 3 destinations to
+travel?
