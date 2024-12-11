@@ -144,3 +144,4 @@ cython_debug/
 
 # Generated data
 /data/results
+/data/results_single

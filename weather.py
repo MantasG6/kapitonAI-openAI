@@ -18,8 +18,8 @@ def forecast(coordinates):
 		"latitude": coordinates.lat, 
 		"longitude": coordinates.lon,
 		"hourly": ["temperature_2m", "rain", "wind_speed_10m", "wind_direction_10m"],
-		"forecast_days": 3,
-		"temporal_resolution": "hourly_3"
+		"forecast_days": 7,
+		"temporal_resolution": "hourly_6"
 	}
 	responses = openmeteo.weather_api(url, params=params)
 
@@ -57,8 +57,8 @@ def marine(coordinates):
 		"latitude": coordinates.lat,
 		"longitude": coordinates.lon,
 		"hourly": ["wave_height", "wave_direction"],
-		"forecast_days": 3,
-		"temporal_resolution": "hourly_3"
+		"forecast_days": 7,
+		"temporal_resolution": "hourly_6"
 	}
 	responses = openmeteo.weather_api(url, params=params)
 
