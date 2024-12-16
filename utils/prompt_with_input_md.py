@@ -9,10 +9,7 @@ from dict2xml import dict2xml
 from models.Destination import Destination
 from models.Coordinates import Coordinates
 
-client = OpenAI(
-    project="proj_0v741Xdrt8NvmO2kOs1prFcr",
-    api_key="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"
-)
+client = OpenAI()
 
 def get_result(location, localtime):
     latitude = str.split(location['Coordinates'], ',')[0]

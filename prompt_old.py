@@ -1,7 +1,3 @@
-import sys
-# setting path
-sys.path.append('../')
-
 from openai import OpenAI
 import json
 from weather import forecast, marine
@@ -24,12 +20,12 @@ def get_result(location, localtime):
     weather_xml = dict2xml(weather_dict, wrap="weather", indent="       ")
     marine_xml = dict2xml(marine_dict, wrap="marine", indent="      ")
 
-    messages = [    
+    messages = [
         {
             "role": "system",
-            "content": "You are a sailboat expert, providing useful insights to the captain in JSON.\n"
-            # Pass the json schema to the model. Pretty printing improves results.
-            f" The JSON object must use the schema: {json.dumps(Destination.model_json_schema(), indent=2)}"
+                "content": "You are a sailboat expert, providing useful insights to the captain in JSON.\n"
+                # Pass the json schema to the model. Pretty printing improves results.
+                f" The JSON object must use the schema: {json.dumps(Destination.model_json_schema(), indent=2)}"
         },
         {
             "role": "user",
@@ -98,5 +94,4 @@ Based on provided location, weather forecast, marine forecast, boatInfo and goal
         seed=42,
         response_format={"type": "json_object"} # Destination
     )
-    input = messages[1]['content']
-    return input, completion.choices[0].message.content
+    return completion.choices[0].message.content

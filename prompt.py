@@ -1,3 +1,7 @@
+import sys
+# setting path
+sys.path.append('../')
+
 from openai import OpenAI
 import json
 from weather import forecast, marine
@@ -5,10 +9,7 @@ from dict2xml import dict2xml
 from models.Destination import Destination
 from models.Coordinates import Coordinates
 
-client = OpenAI(
-    project="proj_0v741Xdrt8NvmO2kOs1prFcr",
-    api_key="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"
-)
+client = OpenAI()
 
 def get_result(location, localtime):
     latitude = str.split(location['Coordinates'], ',')[0]
@@ -23,12 +24,23 @@ def get_result(location, localtime):
     weather_xml = dict2xml(weather_dict, wrap="weather", indent="       ")
     marine_xml = dict2xml(marine_dict, wrap="marine", indent="      ")
 
-    messages = [
+    messages = [    
         {
             "role": "system",
-                "content": "You are a sailboat expert, providing useful insights to the captain in JSON.\n"
-                # Pass the json schema to the model. Pretty printing improves results.
-                f" The JSON object must use the schema: {json.dumps(Destination.model_json_schema(), indent=2)}"
+            "content": """
+            You are a sailboat expert.
+            Your main objective is to provide a weeks plan for a User, who wants to plan his sailing journey. 
+            User provides you with sailingData which contains his current location, weather information (wind + marine wave data) for his location, his boat information and his experience in sailing.
+            When user provides you with all the data, you provide him with 1 week planned trip which contains:
+            - each day nearby port to travel
+            - each port coordinates
+            - distance between ports in Nautical Miles
+            - each trip duration in hours and minutes (00:00)
+            - safety aspect based on weather and experience of the sailor for each day
+
+            Provide the output in JSON only and no additional text."""
+            # Pass the json schema to the model. Pretty printing improves results.
+            # f" The JSON object must use the schema: {json.dumps(Destination.model_json_schema(), indent=2)}"
         },
         {
             "role": "user",
@@ -80,12 +92,7 @@ def get_result(location, localtime):
             <course>Advanced Seamanship</course>
         </sailingCoursesTraining>
     </experience>
-    <goal>
-        <comfort>Various</comfort>
-        <maxTripDuration>08:00</maxTripDuration>
-    </goal>
 </sailingData>
-Based on provided location, weather forecast, marine forecast, boatInfo and goal could you please provide me with 3 destinations to travel?
     """
         }
     ]
