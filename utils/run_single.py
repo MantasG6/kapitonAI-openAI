@@ -1,8 +1,9 @@
-from prompt_with_input_md import get_result
+from prompt_with_input import get_result
 import pandas as pd
+from datetime import datetime
 
+LOCAL_DATE_TIME = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 OUTPUT_PATH = '../data/results_single/'
-LOCAL_DATE_TIME = '2024-11-21 12:55'
 
 locations = pd.read_csv("../data/locations.csv", sep=";")
 

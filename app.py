@@ -2,8 +2,9 @@ from flask import Flask
 from flask_cors import CORS
 from prompt import get_result
 import pandas as pd
+from datetime import datetime
 
-LOCAL_DATE_TIME = '2024-11-13 10:55'
+LOCAL_DATE_TIME = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 app = Flask(__name__)
 
