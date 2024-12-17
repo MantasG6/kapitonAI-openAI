@@ -6,7 +6,7 @@ from openai import OpenAI
 import json
 from weather import forecast, marine
 from dict2xml import dict2xml
-from models.Destination import Destination
+from models.TripPlan import TripPlan
 from models.Coordinates import Coordinates
 
 client = OpenAI()
@@ -40,7 +40,7 @@ def get_result(location, localtime):
 
             Provide the output in JSON only and no additional text."""
             # Pass the json schema to the model. Pretty printing improves results.
-            # f" The JSON object must use the schema: {json.dumps(Destination.model_json_schema(), indent=2)}"
+            f" The JSON object must use the schema: {json.dumps(TripPlan.model_json_schema(), indent=2)}"
         },
         {
             "role": "user",
@@ -102,7 +102,7 @@ def get_result(location, localtime):
         max_tokens=8000,
         messages=messages,
         seed=42,
-        response_format={"type": "json_object"} # Destination
+        response_format= {"type": "json_object"} # Destination
     )
     input = messages[1]['content']
     return input, completion.choices[0].message.content
