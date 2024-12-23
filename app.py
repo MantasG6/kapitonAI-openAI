@@ -1,25 +1,33 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask_cors import CORS
-from prompt import get_result
-import pandas as pd
-from datetime import datetime
+from ariadne import load_schema_from_path, make_executable_schema, \
+    graphql_sync, ObjectType
+from api.queries import getTripPlan_resolver
 
-LOCAL_DATE_TIME = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+query = ObjectType("Query")
+query.set_field("getTripPlan", getTripPlan_resolver)
+
+type_defs = load_schema_from_path("schema.graphql")
+schema = make_executable_schema(
+    type_defs, query
+)
 
 app = Flask(__name__)
 
 # Enable CORS for all routes
 CORS(app)
 
-locations = pd.read_csv("./data/locations.csv", sep=";")
-loc = locations.iloc[0]
-
-@app.route('/data')
-def get_data():
-    
-    data = get_result(loc, LOCAL_DATE_TIME)
-    # Returning the data as JSON
-    return data
+@app.route("/graphql", methods=["POST"])
+def graphql_server():
+    data = request.get_json()
+    success, result = graphql_sync(
+        schema,
+        data,
+        context_value=request,
+        debug=app.debug
+    )
+    status_code = 200 if success else 400
+    return jsonify(result), status_code
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)

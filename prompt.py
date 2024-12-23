@@ -1,22 +1,14 @@
-import sys
-# setting path
-sys.path.append('../')
-
 from openai import OpenAI
 import json
 from weather import forecast, marine
 from dict2xml import dict2xml
 from models.TripPlan import TripPlan
-from models.Coordinates import Coordinates
 
 client = OpenAI()
 
 def get_result(location, localtime):
-    latitude = str.split(location['Coordinates'], ',')[0]
-    longitude = str.split(location['Coordinates'], ',')[1]
-    coords = Coordinates(lat=latitude, lon=longitude)
-    weather_json = forecast(coords)
-    marine_json = marine(coords)
+    weather_json = forecast(location.coordinates)
+    marine_json = marine(location.coordinates)
 
     weather_dict = json.loads(weather_json)
     marine_dict = json.loads(marine_json)
@@ -47,10 +39,10 @@ def get_result(location, localtime):
             "content": f"""
 <sailingData>
     <location>
-        <name>{location['Name']}</name>
-        <region>{location['Region']}</region>
-        <lat>{coords.lat}</lat>
-        <lon>{coords.lon}</lon>
+        <name>{location.name}</name>
+        <region>{location.region}</region>
+        <lat>{location.coordinates.lat}</lat>
+        <lon>{location.coordinates.lon}</lon>
         <localtime>{localtime}</localtime>
     </location>
     {weather_xml}

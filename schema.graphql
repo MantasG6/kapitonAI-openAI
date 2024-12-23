@@ -1,0 +1,45 @@
+schema {
+    query: Query
+}
+
+input CoordinatesInput {
+    lat: Float!
+    lon: Float!
+}
+
+input LocationInput {
+    name: String!
+    region: String!
+    coordinates: CoordinatesInput
+}
+
+type Coordinates {
+    lat: Float!
+    lon: Float!
+}
+
+type Location {
+    name: String!
+    region: String!
+    coordinates: Coordinates
+}
+
+type Trip {
+    day: String!
+    coordinates: Coordinates
+    destination: String!
+    distanceNM: Float!
+    duration: String!
+    comfortLevel: String!
+    safety: String!
+}
+
+type TripPlan {
+    success: Boolean!
+    errors: [String]
+    destinations: [Trip]
+}
+
+type Query {
+    getTripPlan(loc: LocationInput!): TripPlan!
+}
